@@ -1,6 +1,7 @@
 #!/usr/bin/env coffee
 
 http = require "http"
+url = require 'url'
 
 http.createServer (request, response) ->
   if request.headers['accept'] == 'application/json' || url.parse(request.url).pathname == '.json'
