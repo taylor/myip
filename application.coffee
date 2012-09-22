@@ -9,7 +9,7 @@ http.createServer (request, response) ->
     response.end "{'ip': '#{request.headers['x-forwarded-for'] || request.connection.remoteAddress}'}"
   else
     response.writeHead 200, 'Content-type': 'text/plain'
-    response.end request.headers['x-forwarded-for'] || request.connection.remoteAddress
+    #response.end request.headers['x-forwarded-for'] || request.connection.remoteAddress
     response.end "#{request.headers['x-forwarded-for'] || request.connection.remoteAddress} #{url.parse(request.url)}"
 
   return
