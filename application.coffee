@@ -5,7 +5,6 @@ http = require "http"
 http.createServer (request, response) ->
 
   response.writeHead 200, 'Content-type': 'text/plain'
-  #response.end request.headers.host
   response.end request.headers['x-forwarded-for'] || request.connection.remoteAddress
 
   return
