@@ -4,7 +4,6 @@
   "author": "Taylor Carpenter",
   "version": "0.0.1",
   "homepage": "https://github.com/taylor/myip-coffee",
-  "engines": { "node":"0.4", "npm":"1" },
   "main": "application.coffee",
   "dependencies": {
     "coffee-script": "*"
