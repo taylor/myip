@@ -6,18 +6,21 @@
       (:remote-addr request)))
 
 (defn json? [request]
-  (let [accept-hdr (:headers request) "accept"]
-  (cond (
+  (let [accept-hdr ((:headers request) "accept")]
+  (cond
     (= accept-hdr "application/json") true
     (= "pathname" "/.json") true
-    :else false))))
+    :else false)))
 
 (defn app [req]
   (let [remote-addr (ip req)]
+  ;(let [mybody (str "ip: " remote-addr)]
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (str "ip:" (remote-addr))}))
-;   :body "ip:" + ip {req}})
+   :body (str "ip: " remote-addr)
+   ;:body mybody
+  }))
+
 
 (defn -main []
   (let [port (Integer/parseInt (get (System/getenv) "PORT" "5000"))]
