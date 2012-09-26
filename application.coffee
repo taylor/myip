@@ -10,7 +10,6 @@ http.createServer (request, response) ->
   else
     response.writeHead 200, 'Content-type': 'text/plain'
     response.end request.headers['x-forwarded-for'] || request.connection.remoteAddress
-    #response.end "#{request.headers['x-forwarded-for'] || request.connection.remoteAddress} #{url.parse(request.url).pathname}"
 
   return
 
