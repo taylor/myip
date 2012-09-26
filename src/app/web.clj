@@ -14,13 +14,14 @@
 
 (defn app [req]
   (let [remote-addr (ip req)]
+  (cond
+    (= (json? req) true) (let [mybody (str "ip:" remote-addr))
+    :else (let [mybody remote-addr])
   ;(let [mybody (str "ip: " remote-addr)]
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (str "ip: " remote-addr)
-   ;:body mybody
-  }))
-
+   :body mybody
+  })))
 
 (defn -main []
   (let [port (Integer/parseInt (get (System/getenv) "PORT" "5000"))]
