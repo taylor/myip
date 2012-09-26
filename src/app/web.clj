@@ -7,10 +7,10 @@
 
 (defn json? [request]
   (let [accept-hdr (:headers request) "accept"]
-  (or (
-      (== accept-hdr "application/json") 
-      (== "pathname" "/.json")
-        true false))))
+  (cond (
+    (= accept-hdr "application/json") true
+    (= "pathname" "/.json") true
+    :else false))))
 
 (defn app [req]
   (let [remote-addr (ip req)]
