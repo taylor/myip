@@ -1,15 +1,19 @@
 {
-  "name": "fles.ch",
+  "name": "myip",
   "description": "This is a simple remote ip address web app written in Coffeescript powered Node app for Heroku.",
   "author": "Taylor Carpenter",
   "version": "0.0.1",
-  "homepage": "https://github.com/taylor/myip-coffee",
+  "homepage": "https://github.com/taylor/myip",
   "main": "application.coffee",
+  "engines": {
+    "node": "0.4.7",
+    "npm":  "1.0.106"
+  },
   "dependencies": {
     "coffee-script": "*"
   },
   "repositories": [
-    { "type":"git", "url":"git://github.com/taylor/myip-coffee.git" }
+    { "type":"git", "url":"git://github.com/taylor/myip.git" }
   ],
   "licenses": [
     { "type":"MIT", "url":"http://taylor.mit-license.org/"}
