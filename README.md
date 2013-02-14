@@ -1,5 +1,7 @@
 # Remote address aka what is my ip
 
+Try it at http://ip.ixx.io/ or http://your-ip-as-seen-from.heroku.com/
+
 This is a simple remote address displayer application written in *both* [Clojure](http://clojure.org/) (running on jetty) and [Coffescript](http://coffeescript.org) (running on [Node](http://nodejs.org) targetting [Heroku](http://heroku.com/).
 
 Change the Procfile to try the different versions.
