@@ -1,6 +1,6 @@
 # Remote address aka what is my ip
 
-This is a simple remote address displayer application written in [Clojure](http://clojure.org/) with jetty and [Coffescript](http://coffeescript.org) powered [Node](http://nodejs.org) on [Heroku](http://heroku.com/).
+This is a simple remote address displayer application written in *both* [Clojure](http://clojure.org/) (running on jetty) and [Coffescript](http://coffeescript.org) (running on [Node](http://nodejs.org) targetting [Heroku](http://heroku.com/).
 
 Change the Procfile to try the different versions.
 
